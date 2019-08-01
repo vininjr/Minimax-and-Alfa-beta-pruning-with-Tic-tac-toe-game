@@ -1,0 +1,44 @@
+<mat-toolbar color="primary" style="box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28)">
+  <img src="./assets/logo_ufc/logo_campus.png" style="width: 13%;height: 65%;">
+  <span style="margin-left: 33.5%;font-size: 18pt">MiniMax</span>
+</mat-toolbar>
+<h1></h1>
+<span style="color: red;margin-left: 35%">Mensagem: {{mensage}}</span>
+<h1></h1>
+
+<body ngOnload="inicializa();">
+  <div id="container">
+    <div id="quadroesq">
+      <table id="tabuleiro">
+        <tr>
+          <td id="p00" (click)="jogaHumano(0,0)"></td>
+          <td id="p01" (click)="jogaHumano(0,1)"></td>
+          <td id="p02" (click)="jogaHumano(0,2)"></td>
+        </tr>
+        <tr>
+          <td id="p10" (click)="jogaHumano(1,0)"></td>
+          <td id="p11" (click)="jogaHumano(1,1)"></td>
+          <td id="p12" (click)="jogaHumano(1,2)"></td>
+        </tr>
+        <tr>
+          <td id="p20" (click)="jogaHumano(2,0)"></td>
+          <td id="p21" (click)="jogaHumano(2,1)"></td>
+          <td id="p22" (click)="jogaHumano(2,2)"></td>
+        </tr>
+      </table>
+    </div>
+
+    <div id="quadrodir">
+      <br>
+      <form>
+        <button style="margin-left: 30%;background: teal" color="accent" mat-raised-button routerLink="/alfaBeta">Alfa
+          Beta</button>
+          <h1></h1>
+        <button id="reiniciar" style="margin-left: 30%;background: teal" color="accent" mat-raised-button (click)="inicializa()">Reiniciar</button>
+      </form>
+      <br><br>
+    </div>
+    <br><br><br><br>
+    <div id="quadroFilhos" class="clear"></div>
+  </div>
+</body>
